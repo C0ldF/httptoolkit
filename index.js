@@ -21,7 +21,7 @@ const isWin = process.platform === 'win32'
 const isMac = process.platform === 'darwin'
 
 const appPath =
-  isWin ? path.join(process.env.LOCALAPPDATA ?? '', 'Programs', 'httptoolkit', 'resources')
+  isWin ? path.join(process.env.LOCALAPPDATA ?? '', 'Programs', 'HTTP Toolkit', 'resources')
   : isMac ? '/Applications/HTTP Toolkit.app/Contents/Resources'
   : fs.existsSync('/opt/HTTP Toolkit/resources') ? '/opt/HTTP Toolkit/resources'
   : '/opt/httptoolkit/resources'
