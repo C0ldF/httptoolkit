@@ -1,11 +1,22 @@
-<h1 align="center">HTTP Toolkit Pro Patcher</h1>
+# HTTP Toolkit Pro Patcher
 
 This is a simple tool to patch the HTTP Toolkit Pro app to enable the Pro features without a license or subscription. **But please consider supporting the developer by purchasing a license if you find the HTTP Toolkit useful.**
 
+## About
+
+This project is a fork of [C0ldF/httptoolkit](https://github.com/C0ldF/httptoolkit), updated to work with the latest version of the HTTP Toolkit app. Notable fixes in this fork:
+
+- Works with the current HTTP Toolkit desktop app (tested on v1.20.1)
+- Fixed `https-proxy-agent` loading so the app starts even without a proxy configured
+- Fixed compatibility with Express 5 (`path-to-regexp` v8 no longer accepts `*` wildcards)
+- Injected a full `UserData`-compatible object so the UI no longer crashes on startup
+- The patcher now kills stale HTTP Toolkit processes holding the management/proxy ports before starting (Windows and Linux/macOS)
+- Subscriptions are set to effectively never expire
+
 ## Usage
 
-1. Clone this repository using `git clone https://github.com/XielQs/httptoolkit-pro-patcher.git`
-2. cd into the directory using `cd httptoolkit-pro-patcher`
+1. Clone this repository using `git clone https://github.com/cointhedev/httptoolkit.git`
+2. cd into the directory using `cd httptoolkit`
 3. Run `npm install` or whatever package manager you use
 4. Run `node . patch` to patch the app
 
